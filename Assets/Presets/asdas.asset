@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6897f53acb110f74eb5107fe0683437f, type: 3}
-  m_Name: test
+  m_Name: asdas
   m_EditorClassIdentifier: 
-  presetName: test3
+  presetName: 
   background: {r: 0, g: 0, b: 0, a: 0}
   selectedProjection: 0
   fieldOfView: 0

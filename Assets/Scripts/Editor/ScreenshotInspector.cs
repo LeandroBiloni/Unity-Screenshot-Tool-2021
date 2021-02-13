@@ -39,6 +39,7 @@ public class ScreenshotInspector : Editor
     GameObject _camObj;
     Vector3 _pos;
     GUIStyle _importantStyle = new GUIStyle();
+    Camera _sceneCamera;
     private void OnEnable()
     {
         _importantStyle.fontStyle = FontStyle.Bold;
@@ -86,6 +87,7 @@ public class ScreenshotInspector : Editor
                 _defaultPaths[i] = ((DefaultPaths)AssetDatabase.LoadAssetAtPath(files[i], typeof(DefaultPaths))).screenshotPath;
             }
         }
+        _sceneCamera = EditorWindow.GetWindow<SceneView>().camera;
     }
 
 
@@ -315,13 +317,14 @@ public class ScreenshotInspector : Editor
     private void GUIHandles()
     {
         Handles.BeginGUI();
-        var rect = EditorWindow.GetWindow<SceneView>().camera.pixelRect;
+        var rect = _sceneCamera.pixelRect;
         var p = Camera.current.WorldToScreenPoint(_pos);
         GUILayout.BeginArea(new Rect(p.x, rect.height - p.y, rect.width / 8, rect.height));
+        Rect r = new Rect(p.x, rect.height - p.y, rect.width / 8, rect.height);
         if (GUILayout.Button("Take Screenshot"))
             TakeScreenshot();
 
-        if (_noDefaultPathsError)
+        if (_noDefaultPathsError && _useCustomPath == false)
             DefaultPathsError();
 
         if (_noRenderTextureError)

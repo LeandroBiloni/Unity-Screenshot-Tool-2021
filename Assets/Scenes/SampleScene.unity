@@ -507,7 +507,7 @@ RenderTexture:
   m_TextureSettings:
     serializedVersion: 2
     m_FilterMode: 1
-    m_Aniso: 1
+    m_Aniso: 0
     m_MipBias: 0
     m_WrapU: 1
     m_WrapV: 1
@@ -583,10 +583,7 @@ MonoBehaviour:
   renderTextureWidth: 1920
   renderTextureHeight: 1080
   renderTexture: {fileID: 1343115912}
-  presets:
-  - {fileID: 11400000, guid: f66123d72d4bebd44ae13d696789d5bf, type: 2}
-  - {fileID: 11400000, guid: 951213ed1317b844f8633798e8bbec1f, type: 2}
-  - {fileID: 11400000, guid: 5030d662dda9ac741b465b148f97a423, type: 2}
+  presets: []
 --- !u!20 &1710870447
 Camera:
   m_ObjectHideFlags: 0
@@ -770,8 +767,8 @@ MonoBehaviour:
   renderTextureHeight: 1080
   renderTexture: {fileID: 1579727804}
   presets:
-  - {fileID: 11400000, guid: 951213ed1317b844f8633798e8bbec1f, type: 2}
-  - {fileID: 11400000, guid: 5030d662dda9ac741b465b148f97a423, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!20 &2106078658
 Camera:
   m_ObjectHideFlags: 0

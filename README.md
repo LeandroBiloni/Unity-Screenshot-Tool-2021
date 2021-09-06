@@ -1,2 +1,2 @@
 # Unity Screenshot Tool
- Simple tool to take a screenshot of what the camera is watching/rendering.
+Editor tool to take a screenshot of what the camera is watching/rendering. You can create and load presets for the camera and the screenshot.
